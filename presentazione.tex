@@ -27,8 +27,9 @@ Corso di Laurea in Informatica}
 		\end{figure}
 	
 		\begin{itemize}
-			\item sede a Padova all'interno dell'Istituto di Scienze e Tecnologie della Cognizione (ISTC) che fa parte del CNR
-			\item tecnologie vocali
+			\item start-up
+			\item sede a Padova ospitata dall'Istituto di Scienze e Tecnologie della Cognizione (ISTC) che fa parte del CNR
+			\item si occupa di tecnologie vocali
 			\item personalizzazione della voce
 			
 		\end{itemize}
@@ -43,9 +44,16 @@ Corso di Laurea in Informatica}
 		\begin{textblock*}{5cm}(7cm,2cm) % {block width} (coords)
 			\includegraphics[width=5cm]{images/speect_logo_full}
 		\end{textblock*}
+	    \vspace{50pt}
+		\textbf{Progetti in corso di sviluppo}
 		\begin{itemize}
-			\item piattaforma \textbf{FATTS} che integra \textbf{MaryTTS} (prodotto attuale)
-			\item sviluppo dell'engine TTS \textbf{Speect} (prossimo prodotto)
+			\item piattaforma \textbf{FATTS} che integra \textbf{MaryTTS}
+			\item engine TTS \textbf{Speect}
+		\end{itemize}
+		\vspace{10pt}
+		\textbf{Obiettivo dell'azienda}
+		\begin{itemize}
+			\item abbandonare \textbf{MaryTTS} per adottare \textbf{Speect} 
 		\end{itemize}
 	\end{frame}
 
@@ -53,7 +61,7 @@ Corso di Laurea in Informatica}
 	\section{Problema affrontato}
 
 	\begin{frame}{Problema affrontato}
-		Integrazione degli \textbf{engine Text-To-Speech} con \textbf{Microsoft Windows} attraverso interfaccia \textbf{SAPI 5}
+		Integrazione degli \textbf{engine Text-To-Speech} con \textbf{Microsoft Windows} attraverso l'interfaccia \textbf{SAPI 5}
 		\begin{itemize}
 		\item \textbf{rendere funzionanti} gli engine TTS con Microsoft Windows
 		\item \textbf{studiare} l'interfaccia SAPI 5 per trovare la soluzione migliore
@@ -72,13 +80,24 @@ Corso di Laurea in Informatica}
 	\begin{frame}{Soluzione}
 		Per \textbf{MaryTTS}
 		\begin{itemize}
-			\item implementazione di una interfaccia SAPI 5
+			\item implementazione dell'interfaccia SAPI 5
 			\item componente per la comunicazione con MaryTTS
 		\end{itemize}
 		Per \textbf{Speect}
 		\begin{itemize}
-			\item implementazione di una interfaccia SAPI 5
+			\item implementazione dell'interfaccia SAPI 5
+			\item nuova classe per abilitare la \textbf{serializzazione} di uno stream audio in un buffer
+			\item nuovi metodi per controllare la \textbf{velocità} e \textbf{tonalità} della voce
 		\end{itemize}
+	\end{frame}
+
+	\section{Specifica SAPI 5}
+	
+	\begin{frame}{Specifica SAPI 5}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=\textwidth]{images/specifica-sapi5}
+		\end{figure}
 	\end{frame}
 
 	\section{Architettura per MaryTTS}
@@ -148,7 +167,7 @@ Corso di Laurea in Informatica}
 \begin{frame}{Prodotto Finale}
 	\begin{itemize}
 		\item Libreria a caricamento dinamico (\textbf{DLL}) per ogni implementazione
-		\item installazione automatica tramite pacchetto \textbf{NSIS}
+		\item Installazione automatica tramite pacchetto \textbf{NSIS}
 	\end{itemize}
 	\begin{figure}[H]
 		\includegraphics[width=\textwidth]{images/prodotto-finale}
@@ -171,7 +190,7 @@ Corso di Laurea in Informatica}
 \begin{frame}{Prodotto Finale}
 	\begin{itemize}
 	 \item Controllo di un avatar 
-	 \item Tracciare parole sintetizzate in un testo
+	 \item Evidenziare il testo riprodotto
 	\end{itemize}
 	\begin{figure}[H]
 		\includegraphics[height=6cm]{images/prodotto-finale-3}
@@ -184,10 +203,11 @@ Corso di Laurea in Informatica}
 
 \section{Considerazioni finali}
 \begin{frame}{Considerazioni finali}
-	\textbf{Impressioni}
+	\textbf{Risultato}
 	\begin{itemize}
-		\item progetto molto interessante
-		\item il tutor aziendale è rimasto soddisfatto
+		\item tutti gli obiettivi \textbf{obbligatori} sono stati soddisfatti
+		\item nuovo ramo di sviluppo per l'azienda
+		\item entrambi gli engine TTS sono compatibili con i sistemi operativi \textbf{Microsoft Windows} e \textbf{GNU/Linux}
 	\end{itemize}
 	\vspace{10pt}
 	\textbf{Problemi riscontrati}
